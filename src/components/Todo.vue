@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <li>
+  <li v-if="todo">
     <p>
       {{ todo }}
     </p>
@@ -14,6 +14,7 @@ export default {
         @click="
           () => {
             selected = selected === 'todo' ? 'completed' : 'todo';
+            $emit('edit', selected);
           }
         "
       >

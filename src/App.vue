@@ -84,12 +84,19 @@ export default {
     </div>
     <div class="todoList">
       <Todo
+        v-if="filteredData.length > 0"
         v-for="(todo, index) in filteredData"
         @delete="delet(index)"
         :todo="todo.title"
         :selected="todo.status"
         :key="index"
+        @edit="
+          (status) => {
+            todo.status = status;
+          }
+        "
       />
+      <p v-else style="font-size: 24px; height: 100%">it's quite here...</p>
     </div>
   </div>
 </template>
@@ -122,6 +129,7 @@ h1 {
 .todoList {
   display: flex;
   flex-direction: column;
+
   gap: 0.7rem;
 
   padding: 1rem 2rem;
