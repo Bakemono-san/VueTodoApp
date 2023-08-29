@@ -9,11 +9,7 @@ export default {
   },
   data() {
     return {
-      todos: [
-        { title: "job", status: "completed" },
-        { title: "pray", status: "completed" },
-        { title: "sleep", status: "todo" },
-      ],
+      todos: [],
       selected: "all",
       filteredData: [],
     };
