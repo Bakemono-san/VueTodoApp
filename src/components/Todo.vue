@@ -25,7 +25,7 @@ export default {
   </li>
 </template>
 
-<style>
+<style scoped>
 li {
   padding: 12px;
   display: flex;
@@ -39,7 +39,7 @@ li {
 
 p {
   padding-left: 2rem;
-  color: rgb(0, 184, 184);
+  overflow-x: hidden;
 }
 
 button {
@@ -53,5 +53,16 @@ button {
 .actions {
   display: flex;
   gap: 16px;
+}
+@media screen and (width<500px) {
+  li {
+    padding: 6px;
+    gap: 1rem;
+    min-width: 308px;
+  }
+  p {
+    max-width: 10rem;
+    padding-left: 0px;
+  }
 }
 </style>

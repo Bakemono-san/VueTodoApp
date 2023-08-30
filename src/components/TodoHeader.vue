@@ -54,4 +54,23 @@ button {
   border-radius: 5px;
   color: black;
 }
+
+@media screen and (width<500px) {
+  div {
+    justify-content: space-around;
+    gap: 1rem;
+  }
+
+  input {
+    margin: 0px;
+    height: 3rem;
+    padding: 0px;
+    padding: 0px 4px;
+  }
+
+  button {
+    padding: 0 1rem;
+    height: 3rem;
+  }
+}
 </style>
